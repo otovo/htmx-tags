@@ -1,0 +1,143 @@
+{
+    "version": 1.1,
+    "tags": [],
+    "globalAttributes": [
+        {
+            "name": "hx-boost",
+            "description": "Add or remove progressive enhancement for links and forms"
+        },
+        {
+            "name": "hx-get",
+            "description": "Issues a GET to the specified URL"
+        },
+        {
+            "name": "hx-post",
+            "description": "Issues a POST to the specified URL"
+        },
+        {
+            "name": "hx-push-url",
+            "description": "Pushes the URL into the browser location bar, creating a new history entry"
+        },
+        {
+            "name": "hx-select",
+            "description": "Select content to swap in from a response"
+        },
+        {
+            "name": "hx-select-oob",
+            "description": "Select content to swap in from a response, out of band (somewhere other than the target)"
+        },
+        {
+            "name": "hx-swap",
+            "description": "Controls how content is swapped in (outerHTML, beforeEnd, afterend, ...)"
+        },
+        {
+            "name": "hx-swap-oob",
+            "description": "Marks content in a response to be out of band (should swap in somewhere other than the target)"
+        },
+        {
+            "name": "hx-target",
+            "description": "Specifies the target element to be swapped"
+        },
+        {
+            "name": "hx-trigger",
+            "description": "Specifies the event that triggers the request"
+        },
+        {
+            "name": "hx-vals",
+            "description": "Adds values to the parameters to submit with the request (JSON-formatted)"
+        },
+        {
+            "name": "hx-confirm",
+            "description": "Shows a confim() dialog before issuing a request"
+        },
+        {
+            "name": "hx-delete",
+            "description": "Issues a DELETE to the specified URL"
+        },
+        {
+            "name": "hx-disable",
+            "description": "Disables htmx processing for the given node and any children nodes"
+        },
+        {
+            "name": "hx-disinherit",
+            "description": "Control and disable automatic attribute inheritance for child nodes"
+        },
+        {
+            "name": "hx-encoding",
+            "description": "Changes the request encoding type"
+        },
+        {
+            "name": "hx-ext",
+            "description": "Extensions to use for this element"
+        },
+        {
+            "name": "hx-headers",
+            "description": "Adds to the headers that will be submitted with the request"
+        },
+        {
+            "name": "hx-history",
+            "description": "Prevent sensitive data being saved to the history cache"
+        },
+        {
+            "name": "hx-history-elt",
+            "description": "The element to snapshot and restore during history navigation"
+        },
+        {
+            "name": "hx-include",
+            "description": "Include additional data in requests"
+        },
+        {
+            "name": "hx-indicator",
+            "description": "The element to put the htmx-request class on during the request"
+        },
+        {
+            "name": "hx-params",
+            "description": "Filters the parameters that will be submitted with a request"
+        },
+        {
+            "name": "hx-patch",
+            "description": "Issues a PATCH to the specified URL"
+        },
+        {
+            "name": "hx-preserve",
+            "description": "Specifies elements to keep unchanged between requests"
+        },
+        {
+            "name": "hx-prompt",
+            "description": "Shows a prompt() before submitting a request"
+        },
+        {
+            "name": "hx-put",
+            "description": "Issues a PUT to the specified URL"
+        },
+        {
+            "name": "hx-replace-url",
+            "description": "Replace the URL in the browser location bar"
+        },
+        {
+            "name": "hx-request",
+            "description": "Configures various aspects of the request"
+        },
+        {
+            "name": "hx-sse",
+            "description": "Has been moved to an extension. Documentation for older versions"
+        },
+        {
+            "name": "hx-sync",
+            "description": "Control how requests made by different elements are synchronized"
+        },
+        {
+            "name": "hx-validate",
+            "description": "Force elements to validate themselves before a request"
+        },
+        {
+            "name": "hx-vars",
+            "description": "Adds values dynamically to the parameters to submit with the request (deprecated, please use hx-vals)"
+        },
+        {
+            "name": "hx-ws",
+            "description": "Has been moved to an extension. Documentation for older versions"
+        }
+    ],
+    "valueSets": []
+}
