@@ -53,7 +53,7 @@ result = {
 
 documented_value_sets = {e["name"] for e in result["valueSets"]}
 
-HTMX_VERSION = "1.8.5"
+HTMX_VERSION = "1.9.0"
 
 response = urlopen(
     f"https://github.com/bigskysoftware/htmx/archive/refs/tags/v{HTMX_VERSION}.zip"
@@ -64,12 +64,16 @@ content = response.read()
 zip_fd = zipfile.ZipFile(BytesIO(content))
 
 for f in zip_fd.filelist:
-    if f.filename.endswith(".md") and "/www/attributes/" in f.filename:
+    if (
+        f.filename.endswith(".md")
+        and "/www/content/attributes/" in f.filename
+        and "_index" not in f.filename
+    ):
         p = Path(f.filename)
         attribute = p.name.replace(".md", "")
-        attribute_doc = zip_fd.read(f).decode()
+        attribute_doc: str = zip_fd.read(f).decode()
         # Strip front matter from markdown
-        attribute_doc = attribute_doc[attribute_doc.find("## ") :]
+        attribute_doc = attribute_doc[attribute_doc.find("+++", 3)+3:].strip()
 
         entry = {
             "name": attribute,
