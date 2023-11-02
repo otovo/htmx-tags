@@ -53,7 +53,7 @@ result = {
 
 documented_value_sets = {e["name"] for e in result["valueSets"]}
 
-HTMX_VERSION = "1.9.0"
+HTMX_VERSION = "1.9.6"
 
 response = urlopen(
     f"https://github.com/bigskysoftware/htmx/archive/refs/tags/v{HTMX_VERSION}.zip"
