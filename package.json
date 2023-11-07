@@ -1,7 +1,7 @@
 {
 	"name": "htmx-tags",
 	"description": "Provides HTMX tag completion in HTML files in VSCode",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"publisher": "otovo-oss",
 	"repository": "https://github.com/otovo/htmx-tags",
 	"engines": {
