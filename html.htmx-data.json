@@ -33,18 +33,18 @@
       ]
     },
     {
-      "name": "hx-disable",
-      "description": "The `hx-disable` attribute will disable htmx processing for a given element and all its children.  This can be \nuseful as a backup for HTML escaping, when you include user generated content in your site, and you want to \nprevent malicious scripting attacks.\n\nThe value of the tag is ignored, and it cannot be reversed by any content beneath it.\n \n## Notes\n\n* `hx-disable` is inherited",
+      "name": "hx-disabled",
+      "description": "The `hx-disabled` attribute will disable htmx processing for a given element and all its children.  This can be \nuseful as a backup for HTML escaping, when you include user generated content in your site, and you want to \nprevent malicious scripting attacks.\n\nThe value of the tag is ignored, and it cannot be reversed by any content beneath it.\n \n## Notes\n\n* `hx-disabled` is inherited",
       "references": [
         {
           "name": "Official documention",
-          "url": "https://htmx.org/attributes/hx-disable/"
+          "url": "https://htmx.org/attributes/hx-disabled/"
         }
       ]
     },
     {
       "name": "hx-disabled-elt",
-      "description": "The `hx-disabled-elt` attribute allows you to specify elements that will have the `disabled` attribute\nadded to them for the duration of the request.\n\nThe value of this attribute is a CSS query selector of the element or elements to apply the class to,\nor the keyword [`closest`](https://developer.mozilla.org/docs/Web/API/Element/closest), followed by a CSS selector, \nwhich will find the closest ancestor element or itself, that matches the given CSS selector (e.g. `closest tr`), or\nthe keyword `this`\n\nHere is an example with a button that will disable itself during a request:\n\n```html\n<button hx-post=\"/example\" hx-disabled-elt=\"this\">\n    Post It!\n</button>\n```\n\nWhen a request is in flight, this will cause the button to be marked with [the `disabled` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled), \nwhich will prevent further clicks from occurring.  \n\n## Notes\n\n* `hx-disable-elts` is inherited and can be placed on a parent element",
+      "description": "The `hx-disabled-elt` attribute allows you to specify elements that will have the `disabled` attribute\nadded to them for the duration of the request.\n\nThe value of this attribute is a CSS query selector of the element or elements to apply the class to,\nor the keyword [`closest`](https://developer.mozilla.org/docs/Web/API/Element/closest), followed by a CSS selector, \nwhich will find the closest ancestor element or itself, that matches the given CSS selector (e.g. `closest tr`), or\nthe keyword `this`\n\nHere is an example with a button that will disable itself during a request:\n\n```html\n<button hx-post=\"/example\" hx-disabled-elt=\"this\">\n    Post It!\n</button>\n```\n\nWhen a request is in flight, this will cause the button to be marked with [the `disabled` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled), \nwhich will prevent further clicks from occurring.  \n\n## Notes\n\n* `hx-disabled-elts` is inherited and can be placed on a parent element",
       "references": [
         {
           "name": "Official documention",
