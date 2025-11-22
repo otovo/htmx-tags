@@ -13,9 +13,11 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 HTMX_VERSION = "2.0.8"
+HTMX_RELEASE_URL = f"https://github.com/bigskysoftware/htmx/archive/refs/tags/v{HTMX_VERSION}.zip"
 
 
 def get_base_result() -> dict[str, Any]:
+    """Return a base result dictionary with the common structure for all HTMX attribute data."""
     return {
         "version": 1.1,
         "tags": [],
@@ -62,8 +64,8 @@ def get_base_result() -> dict[str, Any]:
     }
 
 
-def fetch_zip_content(version: str) -> bytes:
-    url = f"https://github.com/bigskysoftware/htmx/archive/refs/tags/v{version}.zip"
+def fetch_zip_content(url: str) -> bytes:
+    """Fetch the HTMX zip content from GitHub."""
     if not url.startswith("https://"):
         msg = f"Invalid URL scheme: {url}"
         raise ValueError(msg)
@@ -77,6 +79,7 @@ def fetch_zip_content(version: str) -> bytes:
 
 
 def process_zip_content(content: bytes) -> dict[str, Any]:
+    """Process the HTMX zip content to extract attribute data."""
     result = get_base_result()
     documented_value_sets = {e["name"] for e in result["valueSets"]}
 
@@ -115,7 +118,7 @@ def process_zip_content(content: bytes) -> dict[str, Any]:
 def main() -> None:
     try:
         logger.info(f"Building data for HTMX version {HTMX_VERSION}")
-        content = fetch_zip_content(HTMX_VERSION)
+        content = fetch_zip_content(HTMX_RELEASE_URL)
         data = process_zip_content(content)
         with Path("html.htmx-data.json").open("w", encoding="utf-8") as output_file:
             json.dump(data, output_file, indent=2, ensure_ascii=False)
