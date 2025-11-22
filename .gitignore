@@ -1,6 +1,9 @@
-out
+out/
 dist
 node_modules
 .vscode-test/
 *.vsix
-.vscode
+
+__pycache__/
+*.py[cod]
+*$py.class

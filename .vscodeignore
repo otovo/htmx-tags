@@ -1,5 +1,6 @@
 .vscode/**
 .vscode-test/**
+out/
 src/**
 .gitignore
 .yarnrc
@@ -8,3 +9,12 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
+esbuild.js
+.git
+.github
+node_modules
+**/.ruff_cache
+**/__pycache__
+build-data.py
+demo-1.png
+demo-2.png
